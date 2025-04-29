@@ -1,0 +1,12 @@
+* {
+    background-color: #212121; /* ✅ Correct */
+}
+
+.header{
+    color:#fff;
+    display:none;
+}
+
+.maincontent{
+    color: #fff;
+}
