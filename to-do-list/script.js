@@ -30,9 +30,30 @@ function renderList() {
 
         checklistBtn.onchange = function () {
             li.style.textDecoration = checklistBtn.checked ? "line-through" : "none";
-        };        
+        };
+        
+        const editBtn=document.createElement("button");
+        editBtn.textContent="edit";
+
+
+        editBtn.onclick=function(){
+            li.textContent="";
+            const editInputField=document.createElement("input");
+            editInputField.value=item;
+            const saveBtn=document.createElement("button");
+            saveBtn.textContent="save";
+
+            saveBtn.onclick=function(){
+                list[index]=editInputField.value;
+                renderList();
+            }
+            li.appendChild(editInputField);
+            li.appendChild(saveBtn);
+        }
+
 
         li.appendChild(delBtn);
+        li.appendChild(editBtn);
         li.appendChild(checklistBtn);
         ul.appendChild(li);
     });

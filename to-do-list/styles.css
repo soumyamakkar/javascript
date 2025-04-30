@@ -1,12 +1,117 @@
+/* styles.css */
+
 * {
-    background-color: #212121; /* ✅ Correct */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header{
-    color:#fff;
-    display:none;
+body {
+    background: #f4f6f8;
+    color: #333;
+    padding: 20px;
 }
 
-.maincontent{
-    color: #fff;
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #4a90e2;
+}
+
+.header h2 {
+    font-size: 1.2em;
+    color: #888;
+}
+
+.maincontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+#submit {
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #357ab8;
+}
+
+.todolist {
+    display: flex;
+    justify-content: center;
+}
+
+ul#tasks {
+    list-style: none;
+    width: 400px;
+}
+
+li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+li button {
+    margin-left: 10px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+li button:first-of-type {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+li button:nth-of-type(2){
+    background-color: #72ed72 !important;
+    color: white;
+}
+
+li button:nth-of-type(2):hover{
+    background-color: #1ba20f !important;
+}
+
+li button:first-of-type:hover {
+    background-color: #e44c4c;
+}
+
+li button:last-of-type {
+    background-color: #d9d9d9;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #aaa;
 }
